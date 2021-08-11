@@ -5,14 +5,14 @@ import java.util.Objects;
 public abstract class Jet {
 	private String type;
 	private String model;
-	private int speed;
+	private double speed;
 	private int range;
 	private long price;
 	public void fly() {
-		double flightHours = (double) (range/speed);
+		double flightHours = (double) Math.round((range/speed)*100)/100;
 		System.out.println("Type: " + type + " Model: " + model + " Max Speed: " + speed + " Max Range: " + range + " Price: " + price + " You have " + flightHours+ " hours left of fuel");
 	}
-	public Jet(String type, String model, int speed, int range, long price) {
+	public Jet(String type, String model, double speed, int range, long price) {
 		super();
 		this.type = type;
 		this.model = model;
@@ -25,8 +25,8 @@ public abstract class Jet {
 	}
 	@Override
 	public String toString() {
-		return "Jet [type=" + type + ", model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price
-				+ "]";
+		return "Jet type: " + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: " + price
+				+ " ";
 	}
 	@Override
 	public int hashCode() {
@@ -57,8 +57,12 @@ public abstract class Jet {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public int getSpeed() {
+	
+	public double getSpeed() {
 		return speed;
+	}
+	public void setSpeed(double speed) {
+		this.speed = speed;
 	}
 	public void setSpeed(int speed) {
 		this.speed = speed;

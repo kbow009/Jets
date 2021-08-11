@@ -6,12 +6,13 @@ public class Recon extends Jet implements SuperSpy {
 		
 	}
 
-	public Recon(String type, String model, int speed, int range, long price) {
+	public Recon(String type, String model, double speed, int range, long price) {
 		super(type, model, speed, range, price);
 	}
 
 	@Override
 	public void reconnaissance() {
+	
 		System.out.println("Recon mission, roger that!");
 	}
 

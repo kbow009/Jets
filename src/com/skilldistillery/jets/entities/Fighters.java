@@ -8,7 +8,7 @@ public class Fighters extends Jet implements FireWeapons {
 
 	
 
-	public Fighters(String type, String model, int speed, int range, long price) {
+	public Fighters(String type, String model, double speed, int range, long price) {
 		super(type, model, speed, range, price);
 		
 	}
@@ -17,9 +17,9 @@ public class Fighters extends Jet implements FireWeapons {
 
 	@Override
 	public void fireweapons() {
+		
 		System.out.println("FIRING WEAPONS!!!");
 		
 	}
-	
     
 }

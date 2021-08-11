@@ -5,7 +5,7 @@ public class Cargo extends Jet implements LoadCargo {
 	public Cargo() {
 	}
 
-	public Cargo(String type, String model, int speed, int range, long price) {
+	public Cargo(String type, String model, double speed, int range, long price) {
 		super(type, model, speed, range, price);
 	}
 
@@ -13,6 +13,7 @@ public class Cargo extends Jet implements LoadCargo {
 
 	@Override
 	public void loadingCargo() {
+		
 		System.out.println("Cargo loaded!");
 		
 	}
